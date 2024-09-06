@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile </title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <div class="profile-card">
+            <!-- Avatar -->
+            <div class="avatar-container">
+                <div class="avatar">
+                    <img src="avt.png" alt="Avatar" class="avatar-img">
+                </div>
+            </div>
+
+            <!-- Name with verification badge -->
+            <h1 class="name">
+                Nguyễn Nhung 
+                <svg class="verified-badge" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+            </h1>
+
+            <!-- Social media icons -->
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon facebook">
+                    <i data-lucide="facebook"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon twitter">
+                    <i data-lucide="twitter"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon instagram">
+                    <i data-lucide="instagram"></i>
+                </a>
+            </div>
+
+            <!-- QR codes and bank information -->
+            <div class="qr-codes">
+                <div class="qr-code">
+                    <img src="vietcomb.png" alt="QR Code 1" class="qr-img">
+                    <p class="qr-label">VIETCOMBANK</p>
+                </div>
+                <div class="qr-code">
+                    <img src="tpbank.png" alt="QR Code 2" class="qr-img">
+                    <p class="qr-label">TP BANK</p>
+                </div>
+                <div class="qr-code">
+                    <img src="tech.png" alt="QR Code 3" class="qr-img">
+                    <p class="qr-label">TECHCOMBANK</p>
+                </div>
+
+            </div>
+
+
+            <!-- Links -->
+            <div class="links">
+                <button class="link-button" data-href="https://zalo.me/0568556965">TĂNG TƯƠNG TÁC MẠNG XÃ HỘI</button>
+                <button class="link-button" data-href="https://zalo.me/0568556965">MUA CHỨNG CHỈ IOS </button>
+                <button class="link-button" data-href="https://zalo.me/0568556965">MUA HACK LIÊN QUÂN IOS</button>
+                <button class="link-button" data-href="https://example1.com">HACK LIÊN QUÂN IOS FREE</button>
+                <button class="link-button" data-href="https://example2.com">MOD SKIN LIÊN QUÂN IOS FREE</button>
+                <button class="link-button" data-href="https://zalo.me/0568556965">MUA HACK FREE FIRE IOS</button>
+                <button class="link-button" data-href="https://example3.com">HACK FREE FIRE IOS FREE</button>
+                <button class="link-button" data-href="https://8link.vip/jVyAqfEvv">VPN 4G FREE</button>
+                <button class="link-button" data-href="https://yeumoney.com/oOekYOXl7">HƯỚNG DẪN LOCKET GOLD</button>
+                <button class="link-button" data-href="https://www.mediafire.com/file/5kllni2lrc9tumw/Locket_Ohb.conf/file">CONF LOCKET GOLD</button>
+                <button class="link-button" data-href="https://i.imgur.com/V4wAsHR.png">MÃ QR VPN</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            wixxe © 2024 All rights reserved
+        </footer>
+    </div>
+    <script src="script.js"></script>
+
+    <script>
+        const Wussun_Music = ["https://thanhdieu.com/files/random-music.php"];
+        let rand = Math.floor(Math.random() * Wussun_Music.length);
+        const audio = new Audio(Wussun_Music[rand]);
+
+        function wussunplay() {
+            audio.play().catch(error => {
+                console.log('Error playing audio:', error);
+            });
+        }
+        document.addEventListener("click", wussunplay);
+
+        audio.addEventListener("ended", function() {
+            rand = (rand + 1) % Wussun_Music.length;
+            audio.src = Wussun_Music[rand];
+            audio.play().catch(error => {
+                console.log('Error playing next audio:', error);
+            });
+        });
+    </script>
+
+    
+
+</body>
+</html>
